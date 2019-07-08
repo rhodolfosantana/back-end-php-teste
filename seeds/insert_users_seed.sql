@@ -1,4 +1,4 @@
-INSERT INTO users(name, email)
+INSERT INTO users(name, email, idade, fone)
     VALUES
         ('Foo Bar', 'foo@bar', 10, 81999999999),
         ('Bar Baz', 'bar@baz', 20, 81999999999),
