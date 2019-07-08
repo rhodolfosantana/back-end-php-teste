@@ -10,8 +10,8 @@ A seguinte estrutura será utilizada para persistência dos dados, podendo ser a
         id      int not null auto_increment primary key
         name    varchar(100) not null
         email   varchar(100) not null
-        idade   number not null
-        fone    number not null
+        idade   int not null
+        fone    int not null
 ```
 ```sql
     tabela: colors
