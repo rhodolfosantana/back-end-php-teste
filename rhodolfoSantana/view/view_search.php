@@ -1,6 +1,6 @@
 <center>
 	
-	<div class="container resultados">
+	<div>
 		<h1>Todos os resultados:</h1>
 		<?php
 			require "../action/action_connection.php";
@@ -11,7 +11,7 @@
 
 
 
-				$checking=("SELECT * FROM users WHERE name LIKE :pesquisa");
+				$checking="SELECT users.*, colors.name_colors FROM users LEFT JOIN colors ON users.colors_id = colors.id_color WHERE name LIKE :pesquisa OR age LIKE :pesquisa OR name_colors LIKE :pesquisa";
 
 
 				$queryOne = $connection->prepare($checking);
@@ -25,9 +25,8 @@
 				
 						for ($i = 0; $i < sizeof($stmt); $i++){
 							$id = $stmt[$i]['id'];
-							//$output .= "<a href='../index.php?id=$id'>";
 							$output .= '<div class="container panel panel-default">';
-							$output .= '<h3>'.$stmt[$i]['name']." - ". $stmt[$i]['idade'].'</h3>';
+							$output .= '<h3>'.$stmt[$i]['name']." - ". $stmt[$i]['age'].'</h3>';
 							$output .= '</div></a>';
 				
 						}
