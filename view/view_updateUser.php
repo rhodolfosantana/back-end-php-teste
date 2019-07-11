@@ -10,7 +10,7 @@
 
     $dados = $query->fetch();
     $name_user = $dados['name'];
-    $idade = $dados['idade'];
+    $age = $dados['age'];
     $idCor = $dados['colors_id'];
 
 
@@ -28,12 +28,12 @@
             <form method="POST" action="../action/action_updateUsers.php?id=<?=$id?>" enctype="multipart/form-data">
                 <div>
                     <label for="text">Nome do Usuário:</label>
-                    <input type="text" name="nome_usuario">
+                    <input type="text" name="nome_usuario" value="<?php echo $name_user?>">
                 </div>
 
                 <div>
                     <label for="text">Idade:</label>
-                    <input type="text" name="age">
+                    <input type="text" name="age" value="<?php echo $age?>">
                 </div>
                 <div><br/>
                     <label for="sel1">Selecione a cor</label>
