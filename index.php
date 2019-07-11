@@ -35,6 +35,9 @@
                 <th>Nome</th>
                 <th>Idade</th>
                 <th>Cor</th>
+                <th>-</th>
+                <th>-</th>
+                
               </tr>
               
                 <?php foreach($colors as $color): ?>
