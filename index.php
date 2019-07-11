@@ -19,8 +19,6 @@
         <div>
           <?php 
             require "action/action_connection.php";
-          //$users      = $connection->query('SELECT * FROM users');
-          //$users->setFetchMode(PDO::FETCH_INTO, new stdClass);
             $sql     = 'SELECT users.*, colors.name_colors FROM users LEFT JOIN colors ON users.colors_id = colors.id_color';
             $stmt = $connection->prepare($sql);
 
@@ -30,16 +28,6 @@
 
 
 
-          //foreach($users as $user) {
-
-           // echo sprintf("<li>ID %s - NAME: %s / age: %s</li>",
-            //            $user->id, $user->name, $user->age);
-
-          //}
-
-          //$con = null;
-
-          //var_dump($colors);
           ?>
         
           <table border="1px">
