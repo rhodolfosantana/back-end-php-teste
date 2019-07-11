@@ -42,27 +42,25 @@
           //var_dump($colors);
           ?>
         
-     
-
-          
           <table border="1px">
-            <?php foreach($colors as $color): ?>
               <tr>
                 <th>Nome</th>
-                <td><?php echo $color['name']; ?></td>
                 <th>Idade</th>
-                <td><?php echo $color['age']; ?></td>
                 <th>Cor</th>
-                <td><?php echo $color['name_colors']?></td>
-              
-
-
-                <td><a href="view/view_updateUser.php?id=<?=$color['id_user']?>">Editar</a></td>
-                <td><a href="action/action_deleteUsers.php?id=<?=$color['id_user']?>">Excluir</a></td>
               </tr>
-            <?php endforeach; ?>
+              
+                <?php foreach($colors as $color): ?>
+                  <tr>
+                    <td><?php echo $color['name']; ?></td>
+                    <td><?php echo $color['age']; ?></td>
+                    <td><?php echo $color['name_colors']; ?></td>
+                    <td><a href="view/view_updateUser.php?id=<?=$color['id_user']?>">Editar</a></td>
+                    <td><a href="action/action_deleteUsers.php?id=<?=$color['id_user']?>">Excluir</a><br/></td>
+                  </tr>
+                <?php endforeach; ?>
     
-          </table><br/><br/>
+          </table>
+          <br/><br/>
           <button><a href="view/view_addUser.php">Cadastrar</a></button>
       
         </center>
